@@ -41,3 +41,8 @@ variable "caching" {
   description = "Specifies the caching requirements for this Data Disk. Possible values include None, ReadOnly and ReadWrite."
   default = "ReadWrite"
 }
+variable "network_access_policy" {
+  type = string
+  default = "AllowPrivate"
+  
+}
