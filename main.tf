@@ -8,6 +8,7 @@ resource "azurerm_managed_disk" "disk" {
   disk_size_gb         = var.disk_size_gb
   disk_access_id = var.disk_access_id
   network_access_policy = var.network_access_policy
+  public_network_access_enabled = var.public_network_access_enabled
 
   lifecycle {
     ignore_changes = [
