@@ -48,6 +48,11 @@ variable "network_access_policy" {
 }
 variable "disk_access_id" {
   type = string
-  default = "AllowPrivate"
+  
+}
+
+variable "public_network_access_enabled" {
+  type = bool
+  default = "false"
   
 }
