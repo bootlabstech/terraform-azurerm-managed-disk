@@ -6,7 +6,7 @@ resource "azurerm_managed_disk" "disk" {
   storage_account_type = var.storage_account_type
   create_option        = var.create_option
   disk_size_gb         = var.disk_size_gb
-  disk_access_id = azurerm_disk_access.example.id
+  disk_access_id = var.disk_access_id
   network_access_policy = var.network_access_policy
 
   lifecycle {
@@ -15,11 +15,7 @@ resource "azurerm_managed_disk" "disk" {
     ]
   }
 }
-resource "azurerm_disk_access" "example" {
-  name                = "${var.name}-diskacc"
-  resource_group_name = var.resource_group_name
-  location            = var.location
-}
+
 
 # Attaches disk to VM
 resource "azurerm_virtual_machine_data_disk_attachment" "disk_attachment" {
