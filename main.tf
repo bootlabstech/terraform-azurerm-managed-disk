@@ -18,7 +18,6 @@ resource "azurerm_managed_disk" "disk" {
   }
 }
 
-
 # Attaches disk to VM
 resource "azurerm_virtual_machine_data_disk_attachment" "disk_attachment" {
   managed_disk_id    = azurerm_managed_disk.disk.id
