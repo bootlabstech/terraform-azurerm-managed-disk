@@ -9,7 +9,8 @@ resource "azurerm_managed_disk" "disk" {
   disk_access_id = var.disk_access_id
   network_access_policy = var.network_access_policy
   public_network_access_enabled = var.public_network_access_enabled
-
+  source_resource_id = var.source_resource_id
+  trusted_launch_enabled = var.trusted_launch_enabled
   lifecycle {
     ignore_changes = [
       tags,

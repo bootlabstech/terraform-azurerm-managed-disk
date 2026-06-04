@@ -56,3 +56,13 @@ variable "public_network_access_enabled" {
   default = "false"
   
 }
+
+variable "source_resource_id" {
+  type = string
+  description = "source resource id"
+}
+variable "trusted_launch_enabled" {
+  type = bool
+  description = "source resource id"
+  default = false
+}
